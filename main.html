@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FoodFare - Know the true cost of your food</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- disable zooming capabilities, make feel like native application -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    </head>
+    <body>
+        <!--Container-fluid spans entire viewport width, container is fixed width, houses grid system-->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
+                <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4">
+                    <img src="assets/css/images/foodfare.png" id="logo"/>
+                </div>
+                <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4"></div>
+            </div>
+            <!--Use success, warning, error to signal search food successful-->
+            <div class="row">
+                <div class="col-xs-1 col-md-3"></div>
+                <div class="col-xs-10 col-md-6">
+                    <!--Form for food submission-->
+                    <div class="form-group has-success has-feedback">
+                        <label class="control-label sr-only" for="inputFood">Input Food</label>
+                        <div class="input-group">
+                            <span class="input-group-addon input-lg ">Food</span>
+                            <input type="text" class="form-control input-lg" id="inputFood" placeholder="Search here..." aria-describedby="inputSuccessStatus">
+                        </div>
+                        <span class="glyphicon glyphicon-ok form-control-feedback " aria-hidden="true"></span>
+                        <span id="inputSucessStatus" class="sr-only">(success)</span>
+                    </div>                  
+                </div>
+                <div class="col-xs-1 col-md-3"></div>
+            </div>
+            <!-- Main contains results-->
+            <!-- Options: Map, food properties, timeline-->
+            <div class="row">
+                <div class="col-xs-0 col-lg-1"></div>
+                <!-- Main Map!-->
+                <div class="col-xs-12 col-lg-10" >
+                    <div id="map">
+                    </div>
+                </div>
+                <div class="col-xs-0 col-lg-1"></div>
+            </div>
+        </div>
+        <!--Jquery minified-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--Custom own script-->
+        <script type="text/javascript" src="./assets/scripts/main.js"> </script> 
+        <!--Google Maps-->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsl-5Vgr02IGF58MxqOR3ZfLmS03v8cdY&libraries=places&callback=initMap">
+        </script>
+    </body>
+</html>
